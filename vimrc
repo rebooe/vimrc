@@ -66,8 +66,8 @@ nnoremap <Leader>/ :s/^/\/\/\ /g<CR>j
 nnoremap <Leader>? :s/^\/\/\s*//g<CR>
 nnoremap <Leader># :s/^/# /g<CR>j
 "快速滚动
-nnoremap <c-e> 5<c-e>
-nnoremap <c-y> 5<c-y>
+nnoremap J 5<c-e>
+nnoremap K 5<c-y>
 
 "绑定ESC
 inoremap jk <ESC>
