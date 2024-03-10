@@ -3,14 +3,13 @@
 set number
 "统一缩进为4
 set tabstop=4
+set shiftwidth=4
 "鼠标使用模式
 set mouse=r
 "语法高亮
 syntax on
 "字符编码
 set encoding=utf-8 fileencodings=utf-8,ucs-bom,cp936
-"注释颜色
-hi comment ctermfg=6
 "在底部显示，当前键入的指令
 set showcmd
 "去掉讨厌的有关vi一致性模式,避免以前版本的一些bug和局限
@@ -27,14 +26,10 @@ set showmatch
 set fdm=marker
 "开启提示菜单
 set wildmenu
-"开启实时搜索
-"set incsearch
 "根据文件类型自动加载插件
 filetype plugin on
 "开启当前行高亮
 "set cursorline
-"取消外部粘贴内容时自动添加注释
-set paste
 
 "--------------------------------netrw-----------------------------------
 "取消横幅
@@ -49,6 +44,8 @@ let g:netrw_winsize = 20
 "---------------------------------map-------------------------------------
 "显示行号
 nnoremap <F2> :set nu!<CR>
+"paste切换模式
+set pastetoggle=<F12>
 "目录树
 nnoremap <Leader>1 :20Vex<CR>
 nnoremap <Leader>2 <C-w>h:q<CR>
@@ -70,4 +67,4 @@ nnoremap J 5<c-e>
 nnoremap K 5<c-y>
 
 "绑定ESC
-inoremap jk <ESC>
+inoremap jj <ESC>
