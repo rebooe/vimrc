@@ -22,6 +22,8 @@ set helplang=cn
 set autoread
 " 高亮显示匹配的括号
 set showmatch
+" 设置背景颜色
+set background=dark
 " 折叠方式
 set fdm=marker
 " 开启提示菜单
@@ -61,8 +63,8 @@ nnoremap <Leader>; $a;<Esc>
 nnoremap <Leader>/ ^i//<space><Esc>j
 nnoremap <Leader>? :s/^\/\/\s*//g<CR>
 " 快速滚动
-nnoremap J 5<c-e>
-nnoremap K 5<c-y>
+nnoremap J 5j
+nnoremap K 5k
 
 " 绑定ESC
 inoremap jj <ESC>
