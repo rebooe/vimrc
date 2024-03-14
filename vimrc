@@ -46,10 +46,14 @@ let g:netrw_winsize = 20
 "---------------------------------map-------------------------------------
 " 显示行号
 nnoremap <F2> :set nu!<CR>
+
 " 切换 paste 模式
 set pastetoggle=<F12>
+
 " 目录树
 nnoremap <Leader>1 :20Vex<CR>
+nnoremap <Leader>2 :tabnew .<CR>
+
 " 单词环绕符号
 nnoremap <Leader>" viw<Esc>bi"<Esc>ea"<Esc>
 nnoremap <Leader>' viw<Esc>bi'<Esc>ea'<Esc>
@@ -57,22 +61,29 @@ nnoremap <Leader>() viw<Esc>bi(<Esc>ea)<Esc>
 nnoremap <Leader>{} viw<Esc>bi{<Esc>ea}<Esc>
 nnoremap <Leader>[] viw<Esc>bi[<Esc>ea]<Esc>
 nnoremap <Leader><> viw<Esc>bi<<Esc>ea><Esc>
-" 行尾加符号
-nnoremap <Leader>; $a;<Esc>
-" 快速注释/取消注释
-nnoremap <Leader>/ ^i//<space><Esc>j
-nnoremap <Leader>? :s/^\/\/\s*//g<CR>
-" 快速滚动
-nnoremap J 5j
-nnoremap K 5k
-
-" 绑定ESC
-inoremap jj <ESC>
-
-" 单词环绕符号
 vnoremap <Leader>" s""<Esc>hp
 vnoremap <Leader>' s''<Esc>hp
 vnoremap <Leader>() s()<Esc>hp
 vnoremap <Leader>{} s{}<Esc>hp
 vnoremap <Leader>[] s[]<Esc>hp
 vnoremap <Leader><> s<><Esc>hp
+inoremap <Leader>" <Esc>viw<Esc>bi"<Esc>ea"<Esc>a
+inoremap <Leader>' <Esc>viw<Esc>bi'<Esc>ea'<Esc>a
+inoremap <Leader>() <Esc>viw<Esc>bi(<Esc>ea)<Esc>a
+inoremap <Leader>{} <Esc>viw<Esc>bi{<Esc>ea}<Esc>a
+inoremap <Leader>[] <Esc>viw<Esc>bi[<Esc>ea]<Esc>a
+inoremap <Leader><> <Esc>viw<Esc>bi<<Esc>ea><Esc>a
+
+" 行尾加符号
+nnoremap <Leader>; $a;<Esc>
+
+" 快速注释/取消注释
+nnoremap <Leader>/ ^i//<space><Esc>j
+nnoremap <Leader>? :s/^\/\/\s*//g<CR>
+
+" 快速滚动
+nnoremap J 5<c-e>
+nnoremap K 5<c-y>
+
+" 绑定ESC
+inoremap jj <ESC>
