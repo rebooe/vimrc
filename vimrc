@@ -32,6 +32,8 @@ set wildmenu
 filetype plugin on
 " 开启当前行高亮
 "set cursorline
+" 取消搜索高亮
+set nohlsearch
 
 "--------------------------------netrw-----------------------------------
 " 取消横幅
@@ -46,13 +48,17 @@ let g:netrw_winsize = 20
 "---------------------------------map-------------------------------------
 " 显示行号
 nnoremap <F2> :set nu!<CR>
+" 目录树
+nnoremap <Leader><F3> :20Vex<CR>
 
 " 切换 paste 模式
 set pastetoggle=<F12>
 
-" 目录树
-nnoremap <Leader>1 :20Vex<CR>
-nnoremap <Leader>2 :tabnew .<CR>
+" 绑定ESC
+inoremap jj <ESC>
+
+" 保存
+nnoremap <Leader>s :w<CR>
 
 " 单词环绕符号
 nnoremap <Leader>" viw<Esc>bi"<Esc>ea"<Esc>
@@ -79,11 +85,10 @@ nnoremap <Leader>; $a;<Esc>
 
 " 快速注释/取消注释
 nnoremap <Leader>/ ^i//<space><Esc>j
-nnoremap <Leader>? :s/^\/\/\s*//g<CR>
+nnoremap <Leader>? :s/\/\/\s*//g<CR>
+vnoremap <Leader>/ :s/^/\/\/ /g<CR>
+vnoremap <Leader>? :s/\/\/\s*//g<CR>
 
 " 快速滚动
-nnoremap J 5<c-e>
-nnoremap K 5<c-y>
-
-" 绑定ESC
-inoremap jj <ESC>
+nnoremap J 5j
+nnoremap K 5k
