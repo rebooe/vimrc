@@ -46,7 +46,7 @@ let g:netrw_browse_split = 4
 let g:netrw_winsize = 20
 
 "---------------------------------map-------------------------------------
-let mapleader = ";"
+" let mapleader = ";"
 " 显示行号
 nnoremap <F2> :set nu!<CR>
 " 目录树
@@ -58,37 +58,32 @@ set pastetoggle=<F12>
 " 绑定ESC
 inoremap jj <ESC>
 
-" 保存
-nnoremap <Leader>w :w<CR>
-inoremap <Leader>w <Esc>:w<CR>li
-" 退出
-nnoremap <Leader>q :q<CR>
-
 " 单词环绕符号
-nnoremap <Leader>" viw<Esc>bi"<Esc>ea"<Esc>
-nnoremap <Leader>' viw<Esc>bi'<Esc>ea'<Esc>
-nnoremap <Leader>() viw<Esc>bi(<Esc>ea)<Esc>
-nnoremap <Leader>{} viw<Esc>bi{<Esc>ea}<Esc>
-nnoremap <Leader>[] viw<Esc>bi[<Esc>ea]<Esc>
-nnoremap <Leader><> viw<Esc>bi<<Esc>ea><Esc>
-vnoremap <Leader>" s""<Esc>hp
-vnoremap <Leader>' s''<Esc>hp
-vnoremap <Leader>() s()<Esc>hp
-vnoremap <Leader>{} s{}<Esc>hp
-vnoremap <Leader>[] s[]<Esc>hp
-vnoremap <Leader><> s<><Esc>hp
 inoremap <Leader>" <Esc>viw<Esc>bi"<Esc>ea"<Esc>a
 inoremap <Leader>' <Esc>viw<Esc>bi'<Esc>ea'<Esc>a
-inoremap <Leader>() <Esc>viw<Esc>bi(<Esc>ea)<Esc>a
-inoremap <Leader>{} <Esc>viw<Esc>bi{<Esc>ea}<Esc>a
-inoremap <Leader>[] <Esc>viw<Esc>bi[<Esc>ea]<Esc>a
-inoremap <Leader><> <Esc>viw<Esc>bi<<Esc>ea><Esc>a
+inoremap <Leader>( <Esc>viw<Esc>bi(<Esc>ea)<Esc>a
+inoremap <Leader>{ <Esc>viw<Esc>bi{<Esc>ea}<Esc>a
+inoremap <Leader>[ <Esc>viw<Esc>bi[<Esc>ea]<Esc>a
+inoremap <Leader>< <Esc>viw<Esc>bi<<Esc>ea><Esc>a
+nnoremap <Leader>" viw<Esc>bi"<Esc>ea"<Esc>
+nnoremap <Leader>' viw<Esc>bi'<Esc>ea'<Esc>
+nnoremap <Leader>( viw<Esc>bi(<Esc>ea)<Esc>
+nnoremap <Leader>{ viw<Esc>bi{<Esc>ea}<Esc>
+nnoremap <Leader>[ viw<Esc>bi[<Esc>ea]<Esc>
+nnoremap <Leader>< viw<Esc>bi<<Esc>ea><Esc>
+vnoremap <Leader>" s""<Esc>hp
+vnoremap <Leader>' s''<Esc>hp
+vnoremap <Leader>( s()<Esc>hp
+vnoremap <Leader>{ s{}<Esc>hp
+vnoremap <Leader>[ s[]<Esc>hp
+vnoremap <Leader>< s<><Esc>hp
 
 " 行尾加符号
 nnoremap <Leader>; $a;<Esc>
+inoremap <Leader>; <Esc>$a;
 
 " 快速注释/取消注释
-nnoremap <Leader>/ ^i//<space><Esc>j
+nnoremap <Leader>/ ^i//<space><esc>j 
 nnoremap <Leader>? :s/\/\/\s*//g<CR>
 vnoremap <Leader>/ :s/^/\/\/ /g<CR>
 vnoremap <Leader>? :s/\/\/\s*//g<CR>
@@ -96,10 +91,3 @@ vnoremap <Leader>? :s/\/\/\s*//g<CR>
 " 快速滚动
 nnoremap J 5j
 nnoremap K 5k
-
-" 输入括号光标移动至中间
-inoremap () ()<Left>
-inoremap {} {}<Left>
-inoremap [] []<Left>
-inoremap "" ""<Left>
-inoremap '' ''<Left>
