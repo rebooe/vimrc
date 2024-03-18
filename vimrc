@@ -46,10 +46,11 @@ let g:netrw_browse_split = 4
 let g:netrw_winsize = 20
 
 "---------------------------------map-------------------------------------
+let mapleader = ";"
 " 显示行号
 nnoremap <F2> :set nu!<CR>
 " 目录树
-nnoremap <Leader><F3> :20Vex<CR>
+nnoremap <F3> :20Vex<CR>
 
 " 切换 paste 模式
 set pastetoggle=<F12>
@@ -58,7 +59,10 @@ set pastetoggle=<F12>
 inoremap jj <ESC>
 
 " 保存
-nnoremap <Leader>s :w<CR>
+nnoremap <Leader>w :w<CR>
+inoremap <Leader>w <Esc>:w<CR>li
+" 退出
+nnoremap <Leader>q :q<CR>
 
 " 单词环绕符号
 nnoremap <Leader>" viw<Esc>bi"<Esc>ea"<Esc>
@@ -92,3 +96,10 @@ vnoremap <Leader>? :s/\/\/\s*//g<CR>
 " 快速滚动
 nnoremap J 5j
 nnoremap K 5k
+
+" 输入括号光标移动至中间
+inoremap () ()<Left>
+inoremap {} {}<Left>
+inoremap [] []<Left>
+inoremap "" ""<Left>
+inoremap '' ''<Left>
