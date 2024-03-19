@@ -1,6 +1,8 @@
 "-----------------------------------set---------------------------------
 " 显示行号
 set number
+" 显示相对行号
+set relativenumber
 " 统一缩进为4
 set tabstop=4
 set shiftwidth=4
@@ -48,7 +50,7 @@ let g:netrw_winsize = 20
 "---------------------------------map-------------------------------------
 " let mapleader = ";"
 " 显示行号
-nnoremap <F2> :set nu!<CR>
+nnoremap <F2> :set number!<CR>:set relativenumber!<CR>
 " 目录树
 nnoremap <F3> :20Vex<CR>
 
