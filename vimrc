@@ -26,8 +26,8 @@ set autoread
 set showmatch
 " 设置背景颜色
 set background=dark
-" 折叠方式
-set fdm=marker
+" 用语法高亮来定义折叠
+set foldmethod=syntax 
 " 开启提示菜单
 set wildmenu
 " 根据文件类型自动加载插件
@@ -53,7 +53,8 @@ let g:netrw_winsize = 20
 nnoremap <F2> :set number!<CR>:set relativenumber!<CR>
 " 目录树
 nnoremap <F3> :20Vex<CR>
-
+" 切换搜索高亮
+nnoremap <F11> :set hlsearch!<CR>
 " 切换 paste 模式
 set pastetoggle=<F12>
 
@@ -85,7 +86,7 @@ nnoremap <Leader>; $a;<Esc>
 inoremap <Leader>; <Esc>$a;
 
 " 快速注释/取消注释
-nnoremap <Leader>/ ^i//<space><esc>j 
+nnoremap <Leader>/ ^i<space><esc>j 
 nnoremap <Leader>? :s/\/\/\s*//g<CR>
 vnoremap <Leader>/ :s/^/\/\/ /g<CR>
 vnoremap <Leader>? :s/\/\/\s*//g<CR>
