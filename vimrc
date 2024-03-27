@@ -5,6 +5,7 @@ set number
 set relativenumber
 " 统一缩进为4
 set tabstop=4
+set softtabstop=4
 set shiftwidth=4
 " 鼠标使用模式
 set mouse=r
