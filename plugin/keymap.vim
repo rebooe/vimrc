@@ -2,7 +2,7 @@
 "显示/隐藏行号
 noremap <F2> :set number!<CR>:set relativenumber!<CR>
 "目录树
-noremap <C-b> :NERDTreeToggle<CR>
+noremap <C-b> :20Vexplore<CR>
 "终端
 noremap <C-\> :terminal ++rows=5<CR> 
 tnoremap <C-\> <C-w>:q!<CR>
@@ -24,8 +24,8 @@ nnoremap <A-l> gt
 "调整窗口大小
 nnoremap <C-Up> <C-w>+
 nnoremap <C-Down> <C-w>-
-nnoremap <C-Left> <C-w>>
-nnoremap <C-Right> <C-w><
+nnoremap <C-Left> <C-w><
+nnoremap <C-Right> <C-w>>
 
 "单词环绕符号
 vnoremap <Leader>" s""<Esc>hp
