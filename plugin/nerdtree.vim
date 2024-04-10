@@ -1,3 +1,6 @@
+"打开/关闭目录树
+noremap <C-b> :NERDTreeToggle<CR>
+
 augroup nerdtree
 	autocmd!
 
@@ -12,7 +15,8 @@ augroup nerdtree
 	autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | call feedkeys(":quit\<CR>:\<BS>") | endif
 
 	" Open the existing NERDTree on each new tab.
-	autocmd BufWinEnter * if &buftype != 'quickfix' && getcmdwintype() == '' && tabpagenr('$') > 1 | call feedkeys(":NERDTreeMirror\<CR>:wincmd p\<CR>") | endif
+	"autocmd BufWinEnter * if &buftype != 'quickfix' && getcmdwintype() == '' && tabpagenr('$') > 1 | call feedkeys(":NERDTreeMirror\<CR>:wincmd p\<CR>") | endif
+	autocmd BufWinEnter * if &buftype != 'quickfix' && getcmdwintype() == '' && tabpagenr('$') > 1 | silent NERDTreeMirror | endif
 
 	" Auto commands to handle OS commandline arguments
 	autocmd StdinReadPre * let s:std_in=1

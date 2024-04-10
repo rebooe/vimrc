@@ -1,8 +1,7 @@
 "let mapleader = "\"
 "显示/隐藏行号
 noremap <F2> :set number!<CR>:set relativenumber!<CR>
-"目录树
-noremap <C-b> :NERDTreeToggle<CR>
+
 "终端
 noremap <C-\> :terminal ++rows=5<CR> 
 tnoremap <C-\> <C-w>:q!<CR>
@@ -18,9 +17,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
-"切换标签
-nnoremap <A-h> gT
-nnoremap <A-l> gt
+
 "调整窗口大小
 nnoremap <C-Up> <C-w>+
 nnoremap <C-Down> <C-w>-
