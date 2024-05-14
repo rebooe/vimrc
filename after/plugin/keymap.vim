@@ -14,20 +14,6 @@ nnoremap <C-j> <C-w>W
 nnoremap <C-l> gt
 nnoremap <C-h> gT
 
-"单词环绕符号
-vnoremap <Leader>" s""<Esc>hp
-vnoremap <Leader>' s''<Esc>hp
-vnoremap <Leader>( s()<Esc>hp
-vnoremap <Leader>{ s{}<Esc>hp
-vnoremap <Leader>[ s[]<Esc>hp
-vnoremap <Leader>< s<><Esc>hp
-nnoremap <Leader>" viw<Esc>bi"<Esc>ea"<Esc>
-nnoremap <Leader>' viw<Esc>bi'<Esc>ea'<Esc>
-nnoremap <Leader>( viw<Esc>bi(<Esc>ea)<Esc>
-nnoremap <Leader>{ viw<Esc>bi{<Esc>ea}<Esc>
-nnoremap <Leader>[ viw<Esc>bi[<Esc>ea]<Esc>
-nnoremap <Leader>< viw<Esc>bi<<Esc>ea><Esc>
-
 " 输入括号光标移动至中间
 inoremap () ()<Left>
 inoremap {} {}<Left>
