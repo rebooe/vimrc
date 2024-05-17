@@ -40,5 +40,5 @@ set nobackup
 set nowritebackup
 set noswapfile "不要交换文件
 
-set splitbelow "始终在当前窗口下方打开新窗口
+" set splitbelow "始终在当前窗口下方打开新窗口
 set tabpagemax=15 "允许最大标签数

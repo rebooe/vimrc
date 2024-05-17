@@ -27,11 +27,17 @@ if has("nvim")
 	" Plug 'nvim-lua/plenary.nvim', {'on': 'Telescope'}
 	" Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.6' , 'on': 'Telescope'}
 	" 语法高亮
-	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate', 'on': []}
+	" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate', 'on': []}
 	" LSP
+	Plug 'neovim/nvim-lspconfig', {'on': []}
+	" LSP 包管理
 	Plug 'williamboman/mason.nvim'
 	Plug 'williamboman/mason-lspconfig.nvim'
-	Plug 'neovim/nvim-lspconfig', {'on': []}
+	" 改善 Neovim LSP 体验
+	Plug 'nvimdev/lspsaga.nvim'
+	" 自动补全
+	Plug 'hrsh7th/nvim-cmp'
+	Plug 'hrsh7th/cmp-nvim-lsp'
 endif
 
 call plug#end()

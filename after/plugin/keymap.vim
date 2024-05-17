@@ -1,7 +1,5 @@
 "let mapleader="\<Space>"
 
-"显示/隐藏行号
-noremap <F2> :set number!<CR>
 "绑定ESC
 inoremap jk <ESC>
 "Ctrl+s 保存
