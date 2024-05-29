@@ -1,0 +1,25 @@
+{
+	// 自动检查更新	
+	"coc.preferences.extensionUpdateCheck": "weekly",
+	"coc.preferences.formatOnSave": true,
+	"suggest.noselect": true,
+	"codeLens.enable": true,
+	"diagnostic.virtualText": true,
+	"links.tooltip": true,
+	"outline.autoPreview": true,
+	// explorer
+	"explorer.width": 35,
+	"explorer.icon.enableNerdfont": true,
+	"explorer.file.column.indent.indentLine": true,
+	"explorer.file.git.showUntrackedFiles": true,
+	"explorer.diagnostic.enableSubscriptNumber": true,
+	// snippets
+	"snippets.loadFromExtensions": true,
+	"snippets.ultisnips.pythonPrompt": false,
+	// git
+	"git.showCommitInFloating": true,
+	"git.addGBlameToBufferVar": true,
+	"git.floatConfig": {
+		"border": true
+	}
+}
