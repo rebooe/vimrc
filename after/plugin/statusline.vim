@@ -15,7 +15,7 @@ augroup END
 " 当前所在文件
 function! StatusLineActive()
 	setlocal statusline=\ 
-	setlocal statusline+=[%{StatusLineGit()}]\ 
+	setlocal statusline+=%{StatusLineGit()}\ 
 	" setlocal statusline+=[buf:%n]\ 
 	setlocal statusline+=%f\ 
 
@@ -41,10 +41,15 @@ function! StatusLineInactive()
 endfunction
 
 function! StatusLineGit()
-	if exists('g:coc_git_status')
-		return get(g:,'coc_git_status','') . get(b:,'coc_git_status','') . get(b:,'coc_git_blame','')	
-	elseif executable('git')
-		return substitute(system('git branch --show-current'), '\n', '', 'g') 
+	if executable('git')
+		let l:currentDir = expand('%:p:h')
+
+		let l:isGitRepo = substitute(system('git -C ' . l:currentDir . ' rev-parse --is-inside-work-tree'), '\n', '', 'g')
+		if l:isGitRepo != "true"
+			return ''
+		endif
+
+		return '[' . substitute(system('git -C ' . l:currentDir . ' branch --show-current'), '\n', '', 'g') . ']'
 	endif
 endfunction
 

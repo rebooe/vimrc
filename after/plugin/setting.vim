@@ -21,9 +21,14 @@ set autoread "设置当文件被改动时自动载入
 
 set termguicolors "使用终端真颜色
 colorscheme evening "设置主题
-set cursorline "开启当前行高亮
 set showmatch "高亮显示匹配的括号
 set nohlsearch "取消搜索高亮
+"开启当前行高亮
+augroup CursorLine
+  autocmd!
+  autocmd WinLeave * set nocursorline
+  autocmd WinEnter,BufWinEnter * set cursorline
+augroup END
 
 set showcmd "在底部显示，当前键入的指令
 set wildmenu "开启提示菜单
