@@ -1,2 +1,2 @@
-nmap f <Plug>(easymotion-overwin-f)
-nmap F <Plug>(easymotion-overwin-f2)
+nnoremap <Leader>f <Plug>(easymotion-overwin-f)
+nnoremap <Leader>F <Plug>(easymotion-overwin-f2)

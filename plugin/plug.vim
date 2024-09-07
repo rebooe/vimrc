@@ -17,18 +17,19 @@ Plug 'tpope/vim-commentary', {'on': []}
 " Plug 'pbogut/vim-dadbod-ssh', {'on': 'DBUI'}
 " 多光标
 Plug 'mg979/vim-visual-multi', {'branch': 'master', 'on': []}
-" Coc 插件
-Plug 'neoclide/coc.nvim', {'branch': 'release', 'on': []}
-" 代码片段
-Plug 'honza/vim-snippets', {'on': []}
-
-if has("nvim")
-	" 文件搜索
-	" Plug 'nvim-lua/plenary.nvim', {'on': 'Telescope'}
-	" Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.6' , 'on': 'Telescope'}
-	" 语法高亮
-	" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate', 'on': []}
-endif
+" 目录树
+Plug 'preservim/nerdtree', {'on': ['NERDTree', 'NERDTreeToggle', 'NERDTreeMirror']}
+" git插件
+" Plug 'tpope/vim-fugitive', {'on': []}
+Plug 'airblade/vim-gitgutter', {'on': []}
+" 查找文件
+Plug 'ctrlpvim/ctrlp.vim', {'on': []}
+" 自动括号
+Plug 'LunarWatcher/auto-pairs', {'on': []}
+" 窗口快速跳转
+Plug 't9md/vim-choosewin', {'on': []}
+" 代码大纲
+Plug 'liuchengxu/vista.vim', {'on': 'Vista'}
 
 call plug#end()
 
@@ -39,6 +40,8 @@ call plug#load(
 \ 'vim-smoothie',
 \ 'vim-commentary',
 \ 'vim-visual-multi',
-\ 'coc.nvim',
-\ 'vim-snippets',
+\ 'vim-gitgutter',
+\ 'ctrlp.vim',
+\ 'auto-pairs',
+\ 'vim-choosewin',
 \ )

@@ -1,0 +1,2 @@
+require("lazynvim")
+require("lsp")

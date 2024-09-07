@@ -8,11 +8,13 @@ set number "显示行号
 set encoding=utf-8 "字符编码
 set fileencodings=utf-8 
 set mouse=ncr "鼠标使用模式
+set updatetime=200 "自动写入磁盘时间
 
 " 统一缩进为4
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+"set shiftround=true
 set backspace=2 "允许自动缩进、换行符、插入开始位置上退格
 set scrolloff=5 "光标上下两侧最少保留行数
 
