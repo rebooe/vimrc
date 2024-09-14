@@ -5,7 +5,7 @@ Plug 'yianwillis/vimcdoc', {'on': []}
 " 光标快速跳转
 Plug 'easymotion/vim-easymotion', {'on': []}
 " 浮动终端
-Plug 'voldikss/vim-floaterm', {'on': 'FloatermToggle'}
+Plug 'voldikss/vim-floaterm', {'on': ['FloatermToggle', 'FloatermNew']}
 " 平滑滚动
 Plug 'psliwka/vim-smoothie', {'on': []}
 " 快速注释
@@ -26,8 +26,6 @@ Plug 'airblade/vim-gitgutter', {'on': []}
 Plug 'ctrlpvim/ctrlp.vim', {'on': []}
 " 自动括号
 Plug 'LunarWatcher/auto-pairs', {'on': []}
-" 窗口快速跳转
-Plug 't9md/vim-choosewin', {'on': []}
 " 代码大纲
 Plug 'liuchengxu/vista.vim', {'on': 'Vista'}
 
@@ -43,5 +41,4 @@ call plug#load(
 \ 'vim-gitgutter',
 \ 'ctrlp.vim',
 \ 'auto-pairs',
-\ 'vim-choosewin',
 \ )

@@ -115,3 +115,34 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 		vim.lsp.buf.format({ async = true })
 	end,
 })
+
+-- 突出光标所在的符号
+-- 创建一个组来管理 LSP 相关的自动命令，避免重复定义
+local lsp_group = vim.api.nvim_create_augroup("LspDocumentHighlight", { clear = true })
+
+-- 在普通模式下，当光标停留时，高亮当前光标下的符号
+vim.api.nvim_create_autocmd({ "CursorHold" }, {
+	group = lsp_group,
+	buffer = 0, -- 当前缓冲区
+	callback = function()
+		vim.lsp.buf.document_highlight()
+	end,
+})
+
+-- 在插入模式下，当光标停留时，高亮当前光标下的符号
+vim.api.nvim_create_autocmd({ "CursorHoldI" }, {
+	group = lsp_group,
+	buffer = 0, -- 当前缓冲区
+	callback = function()
+		vim.lsp.buf.document_highlight()
+	end,
+})
+
+-- 当光标移动时，清除高亮
+vim.api.nvim_create_autocmd({ "CursorMoved" }, {
+	group = lsp_group,
+	buffer = 0, -- 当前缓冲区
+	callback = function()
+		vim.lsp.buf.clear_references()
+	end,
+})
