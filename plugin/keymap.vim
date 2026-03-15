@@ -5,14 +5,16 @@ inoremap jk <ESC>
 "保存
 nnoremap <Leader>w :w<CR>
 inoremap <Leader>w <ESC>:w<CR>
+"退出
+nnoremap <Leader>q :q<CR>
+inoremap <Leader>q <ESC>:q<CR>
+"切换窗口
+nnoremap <Tab> <C-w>w 
 "切换标签
-nnoremap <Tab> <C-w>w
-nnoremap <S-Tab> <C-w>W
+nnoremap <S-Tab> gt
 "光标跳转
-nnoremap <A-j> 5j
-nnoremap <A-k> 5k
-nnoremap <A-h> ^
-nnoremap <A-l> $
+nnoremap <C-h> ^
+nnoremap <C-l> $
 
 "缩进选中块
 vnoremap << <gv

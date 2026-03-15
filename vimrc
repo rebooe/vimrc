@@ -1,8 +1,3 @@
-if !has('nvim')
-	set previewpopup=height:20,width:80 "把预览窗口配置为弹出窗口
-	set completeopt=menuone,popup,noinsert,noselect "设置自动补全
-endif
-
 set number "显示行号
 "set relativenumber "显示相对行号
 set encoding=utf-8 "字符编码
